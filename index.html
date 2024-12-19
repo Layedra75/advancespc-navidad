@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Advance SPC</title>
+</head>
+<body>
+    <nav class="navbar">
+      <div class="container">
+        <a href="./index.html">
+          <img src="./img/logo.png" alt="Logo de la empresa" class="logo" />
+        </a>
+      </div>
+    </nav>
+  <div id="container">
+    <div class="card">
+      <div class="header">
+        <span id="previewName"></span>
+        <br>
+        <span id="connectionLabel">Connecting..</span>
+      </div>
+      <div class="video-container">
+        <video id="videoElement" autoplay loop></video>
+      </div>
+      <div class="button-group">
+        <button id="chatButton" title="agentManager.chat() -> Communicate with your Agent (D-ID LLM)">
+          <span class="material-symbols-outlined">chat</span>
+        </button>
+        <button id="speakButton" title="agentManager.speak() -> Streaming API (Bring your own LLM)">
+          <span class="material-symbols-outlined">mic</span>
+        </button>
+      </div>
+      
+      <div class="inputsDiv">
+        <textarea id="textArea" placeholder="Escriba su mensaje aquí..." autofocus></textarea>
+      </div>
+    </div>
+    <div style="display: flex;">
+      <div id="answers"></div>
+      <div id="notification-container"></div>
+
+    </div>
+    <div id="hidden" style="display: none;">
+      <h2 id="hidden_h2"></h2>
+      <button id="reconnectButton" title="agentManager.reconnect() -> Reconnects the previous WebRTC session">Reconnect</button>
+    </div>
+  </div>
+  <script type="module" src="/main.js"></script>
+  <script src="webSpeechAPI.js"></script>
+</body>
+</html>
+<script type="module">
+  import * as sdk from "https://cdn.jsdelivr.net/npm/@d-id/client-sdk";
+</script>
