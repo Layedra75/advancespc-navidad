@@ -58,7 +58,7 @@ function chat(transcript) {
     showNotification(transcript);
     let chat = window.agentManager.chat(transcript);
     console.log("agentManager.chat()", transcript);
-    connectionLabel.innerHTML = "Procesando...";
+    connectionLabel.innerHTML = "Pensando...";
   }
 }
 

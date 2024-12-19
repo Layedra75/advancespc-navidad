@@ -107,7 +107,7 @@ function chat() {
         showNotification(val);
         let chat = agentManager.chat(val);
         console.log("agentManager.chat()");
-        connectionLabel.innerHTML = "Thinking..";
+        connectionLabel.innerHTML = "Pensando..";
         textArea.value = "";
     }
 }

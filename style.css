@@ -139,7 +139,7 @@ button:active {
 /* ____________________________________________ */
 #notification-container {
   position: absolute;
-  top: 391px; 
+  top: 430px; 
   left: 50%;
   transform: translateX(-50%);
   width: 80%; 
